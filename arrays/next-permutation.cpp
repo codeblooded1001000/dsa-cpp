@@ -30,12 +30,28 @@ void nextPermutation(vector<int>& nums){
 
 int main() {
     vector<int> nums;
+    nums.push_back(3);
+    nums.push_back(2);
     nums.push_back(1);
-    nums.push_back(1);
-    nums.push_back(1);
+    // nums.push_back(6);
+    // nums.push_back(8);
+    // nums.push_back(4);
+    // nums.push_back(3);
+    // nums.push_back(0);
 
-//  next_permutation(nums.begin(), nums.end());
-   nextPermutation(nums);
+    int i = -1;
+        int j = -1;
+
+        int idx = nums.size()-1;
+        while(nums[idx-1]>=nums[idx]){
+            idx--;
+            i = idx-1;
+        }
+
+        cout<<i<<endl;
+
+ next_permutation(nums.begin(), nums.end());
+//    nextPermutation(nums);
 
     for(int i = 0; i<nums.size(); i++){
         cout << nums[i] << ", ";
